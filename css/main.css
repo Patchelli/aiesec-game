@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=K2D');
+/* GERAL */
+.mt-3 {
+    margin-top: 2rem!important;
+}
+.mb-3 {
+    margin-bottom: 2rem!important;
+}
+.link-padrao {
+    /* text-decoration: none; */
+    color: inherit;
+}
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;    
+    font-family: 'K2D', sans-serif;
+    margin: 0;
+}
+/* PONTUACAO */
+.pontuacao {
+    position: fixed;
+    top: 0;
+    right: -15px;
+}
+    .pontuacao section {
+        background-color: #fff;
+        margin-top: 15px;
+        border-radius: 15px;
+        font-size: 2rem;
+        border: 2px solid #c4b612;
+    }
+    .pontuacao span {
+        padding-left: 25px;
+        padding-right: 50px;
+    }
+        .pontuacao span.label {
+            background-color: #c4b612;
+            border-radius: 15px 0 0 15px;
+            padding: 2px 15px;
+        }
+.cronometro {
+    padding: 0 30px;
+    width: 150px;
+}
+    .cronometro span {
+        padding: 0;
+    }
+/* FORMULARIO */
+form {
+    text-align: center;
+    margin-top: 25px;
+}
+    form select {        
+        height: 35px;
+        font-size: 16px;
+        border: none;
+        border-radius: 2px;
+    }
+    form input {
+        height: 35px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 2px;
+    }
+/* MESA */
+.mesa {
+    border: 12px solid black;
+    border-radius: 50px 50px 400px 400px;
+    height: 70%;
+    width: 75%;
+    margin: 40px auto;
+    background-color: gray;
+    box-shadow: 10px 10px 100px 10px #fff;
+    position: relative;
+    text-align: center;
+}
+    .mesa img {
+        max-width: 100%;
+    }
+    /* .mesa h1 {
+        color: #037BEB;
+    } */
+/* CARTAS */
+.divCarta {
+    width: 5rem;
+    height: 6.9rem;
+    border: 1px dotted #000;
+    display: inline-block;
+    border-radius: 5px;
+}
+    .divCarta img {
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px #000;
+        max-width: 100%;
+    }
+.disable {
+    pointer-events: none;
+}
+.animacao-carta {
+    animation-name: giro;
+    animation-duration: 1s;
+}
+@keyframes giro {
+    0% { transform: rotateY(.5turn); }      
+}
+/* FOOTER */
+footer {
+    background-color: #000000b0;
+    color: #fff;
+    
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.text h1 {
+    font-family: sans-serif;
+    font-size: 4rem;
+    color: #037BEB;
+    margin:.12em;
+}
+
+
+
+
+.text {
+    color: #037BEB;
+    font-family: "Russo One", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 2rem 1rem;
+    opacity: 0;
+    animation: fadeInText 0s 1.1s both;
+  }
+
+  .text-block {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .text-block:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    background: #c48e84;
+    transform: translateX(-100%);
+    animation: enlargeBlock 0.5s 0.6s both, revealBlock 0.5s 1.1s both;
+  }
+
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes enlargeBlock {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes revealBlock {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
